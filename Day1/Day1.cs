@@ -21,4 +21,11 @@
         var caloriesSums = Day1.SumCalories(calories);
         return caloriesSums.Max();
     }
+
+    public static int SolvePart2(string input)
+    {
+        var calories = Day1.ParseInput(input);
+        var caloriesSums = Day1.SumCalories(calories);
+        return caloriesSums.OrderDescending().Take(3).Sum();
+    }
 }
